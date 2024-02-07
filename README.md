@@ -1,3 +1,3 @@
-## WeelOne
+## Weelone
 
-Official website of WeelOne.
+Official website of Weelone.
