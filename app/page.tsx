@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 
 import lofyee from "../public/lofyee.png";
 import { ArrowUpRightIcon, SparklesIcon } from "@heroicons/react/24/outline";
-import { TIMELINE } from "@/lib/data";
+import { TEAM_MEMBERS, TIMELINE } from "@/lib/data";
 
 const unkempt = Unkempt({ weight: ["400", "700"], subsets: ["latin"] });
 
@@ -98,7 +98,7 @@ export default function Home() {
               </div>
               <div>
                 <h1 className="font-bold text-lg">Crafting</h1>
-                <p className="text-zinc-500">Pleas stay tuned</p>
+                <p className="text-zinc-500">Pleas stay tuned.</p>
               </div>
             </div>
             <div className="flex gap-4">
@@ -111,6 +111,39 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="Team" className="max-w-2xl w-full p-4 flex flex-col gap-4">
+        <label className="self-start text-sm text-gray-500 border-b-2 border-orange-500">
+          Team
+        </label>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          {TEAM_MEMBERS.map((member) => (
+            <div
+              key={member.nickname}
+              className="flex flex-col items-center border p-4 rounded-md"
+            >
+              <Image
+                className="h-10 w-10 rounded-full"
+                src={member.avatar}
+                alt={`Avatar of ${member.nickname}`}
+              />
+              <h1 className="font-bold">{member.nickname}</h1>
+              <p className="font-light">{member.role}</p>
+              <div className="self-end text-sm mt-4">
+                <a
+                  className="flex text-orange-500 items-center"
+                  href={member.website}
+                  target="_blank"
+                >
+                  Learn More
+                  <ArrowUpRightIcon className="h-3 w-3 ml-1" />
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section id="about" className="max-w-2xl w-full p-4 flex flex-col gap-4">
         <label className="self-start text-sm text-gray-500 border-b-2 border-orange-500">
           About
@@ -118,7 +151,7 @@ export default function Home() {
 
         <div className="flex flex-col">
           {TIMELINE.map(({ time, content }, index) => (
-            <div key={time} className="flex gap-4 items-center">
+            <div key={content} className="flex gap-4 items-center">
               <div className="flex flex-col items-center self-stretch">
                 <div
                   className={twMerge(
