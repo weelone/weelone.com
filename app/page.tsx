@@ -123,7 +123,7 @@ export default function Home() {
               className="flex flex-col items-center border p-4 rounded-md bg-white/80 dark:bg-black/80"
             >
               <Image
-                className="h-10 w-10 rounded-full"
+                className="h-10 w-10 rounded-full m-2"
                 src={member.avatar}
                 alt={`Avatar of ${member.nickname}`}
               />
@@ -181,8 +181,6 @@ export default function Home() {
           Copyright &copy; 2024 Weelone Ltd
         </span>
       </footer>
-
-      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-zinc-900 bg-zinc-50 [mask-image:radial-gradient(ellipse_at_center,transparent_70%,black)]"></div>
     </main>
   );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
+import { twMerge } from "tailwind-merge";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 
@@ -15,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={openSans.className}>{children}</body>
+    <html lang="en" className="scroll-smooth focus:scroll-auto">
+      <body className={twMerge(openSans.className)}>{children}</body>
     </html>
   );
 }
