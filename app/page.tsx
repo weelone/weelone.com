@@ -3,7 +3,8 @@ import { Unkempt } from "next/font/google";
 import { twMerge } from "tailwind-merge";
 
 import lofyee from "../public/lofyee.png";
-import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import { ArrowUpRightIcon, SparklesIcon } from "@heroicons/react/24/outline";
+import { TIMELINE } from "@/lib/data";
 
 const unkempt = Unkempt({ weight: ["400", "700"], subsets: ["latin"] });
 
@@ -47,12 +48,12 @@ export default function Home() {
         </p>
         <p>Hope you will love.</p>
       </section>
-      <section id="works" className="max-w-2xl w-full p-4 flex flex-col gap-2">
-        <label className="text-sm text-gray-500 border-l-4 border-orange-500 pl-2">
+      <section id="works" className="max-w-2xl w-full p-4 flex flex-col gap-4">
+        <label className="text-sm self-start text-gray-500 border-b-2 border-orange-500">
           Works
         </label>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="rounded border flex flex-col gap-4 justify-between p-4">
+          <div className="rounded-md border flex flex-col gap-4 justify-between p-4">
             <div className="flex gap-4">
               <a
                 className="flex-shrink-0"
@@ -67,7 +68,7 @@ export default function Home() {
               </a>
               <div>
                 <h1 className="font-bold text-lg">Lofyee</h1>
-                <p className="text-gray-500">A Lo-Fi music player for iOS.</p>
+                <p className="text-zinc-500">A Lo-Fi music player for iOS.</p>
               </div>
             </div>
             <div className="flex gap-4">
@@ -89,31 +90,56 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="rounded border flex justify-center items-center p-4">
-            <span className="opacity-50">Crafting...</span>
+
+          <div className="rounded-md border flex flex-col gap-4 justify-between p-4">
+            <div className="flex gap-4">
+              <div className="rounded h-20 w-20 flex-shrink-0 bg-zinc-500 text-white flex justify-center items-center">
+                <SparklesIcon className="h-10 w-10" />
+              </div>
+              <div>
+                <h1 className="font-bold text-lg">Crafting</h1>
+                <p className="text-zinc-500">Pleas stay tuned</p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <a className="text-sm text-zinc-500 flex items-center" href="#">
+                Coming Soon
+                <ArrowUpRightIcon className="h-3 w-3 ml-1" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="about" className="max-w-2xl w-full p-4 flex flex-col gap-2">
-        <label className="text-sm text-gray-500 border-l-4 border-orange-500 pl-2">
+      <section id="about" className="max-w-2xl w-full p-4 flex flex-col gap-4">
+        <label className="self-start text-sm text-gray-500 border-b-2 border-orange-500">
           About
         </label>
 
-        <div className="flex items-center gap-4">
-          <div className="w-3 h-3 rounded-full bg-orange-100 flex justify-center items-center">
-            <div className="w-2 h-2 rounded-full bg-orange-500"></div>
-          </div>
-          <div className="text-gray-500">2024/2/7</div>
-          <div>Official Website Published</div>
-        </div>
-
-        <div className="flex items-center gap-4">
-          <div className="w-3 h-3 rounded-full bg-orange-100 flex justify-center items-center">
-            <div className="w-2 h-2 rounded-full bg-orange-500"></div>
-          </div>
-          <div className="text-gray-500">2024/2/1</div>
-          <div>Founded</div>
+        <div className="flex flex-col">
+          {TIMELINE.map(({ time, content }, index) => (
+            <div key={time} className="flex gap-4 items-center">
+              <div className="flex flex-col items-center self-stretch">
+                <div
+                  className={twMerge(
+                    "w-[2px] flex-grow bg-orange-500",
+                    index === 0 && "opacity-0"
+                  )}
+                ></div>
+                <div className="w-3 h-3 rounded-full bg-orange-100 flex flex-col justify-center items-center">
+                  <div className="w-2 h-2 rounded-full bg-orange-500"></div>
+                </div>
+                <div
+                  className={twMerge(
+                    "w-[2px] flex-grow bg-orange-500",
+                    index === TIMELINE.length - 1 && "opacity-0"
+                  )}
+                ></div>
+              </div>
+              <div className="text-gray-500">{time}</div>
+              <div className="py-2">{content}</div>
+            </div>
+          ))}
         </div>
       </section>
 
