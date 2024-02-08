@@ -52,8 +52,8 @@ export default function Home() {
         <label className="text-sm self-start text-gray-500 border-b-2 border-orange-500">
           Works
         </label>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-white/80 dark:bg-black/80">
-          <div className="rounded-md border flex flex-col gap-4 justify-between p-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="rounded-md border flex flex-col gap-4 justify-between p-4 bg-white/80 dark:bg-black/80">
             <div className="flex gap-4">
               <a
                 className="flex-shrink-0"
