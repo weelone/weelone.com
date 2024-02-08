@@ -10,8 +10,8 @@ const unkempt = Unkempt({ weight: ["400", "700"], subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center gap-8">
-      <header className="max-w-2xl w-full flex justify-between items-center p-4">
+    <main className="flex min-h-screen flex-col items-center gap-8 dark:bg-zinc-900 bg-zinc-50 text-zinc-900 dark:text-zinc-50 dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative">
+      <header className="max-w-3xl w-full flex justify-between items-center p-4">
         <div
           className={twMerge(
             unkempt.className,
@@ -41,18 +41,18 @@ export default function Home() {
         </p>
         <p>
           We craft{" "}
-          <span className=" bg-orange-100 rounded px-2">
+          <span className=" bg-orange-100 rounded px-2 dark:bg-orange-500">
             web/iOS applications
           </span>
           .
         </p>
         <p>Hope you will love.</p>
       </section>
-      <section id="works" className="max-w-2xl w-full p-4 flex flex-col gap-4">
+      <section id="works" className="max-w-3xl w-full p-4 flex flex-col gap-4">
         <label className="text-sm self-start text-gray-500 border-b-2 border-orange-500">
           Works
         </label>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-white/80 dark:bg-black/80">
           <div className="rounded-md border flex flex-col gap-4 justify-between p-4">
             <div className="flex gap-4">
               <a
@@ -91,7 +91,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="rounded-md border flex flex-col gap-4 justify-between p-4">
+          <div className="rounded-md border flex flex-col gap-4 justify-between p-4 bg-white/80 dark:bg-black/80">
             <div className="flex gap-4">
               <div className="rounded h-20 w-20 flex-shrink-0 bg-zinc-500 text-white flex justify-center items-center">
                 <SparklesIcon className="h-10 w-10" />
@@ -111,7 +111,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="Team" className="max-w-2xl w-full p-4 flex flex-col gap-4">
+      <section id="Team" className="max-w-3xl w-full p-4 flex flex-col gap-4">
         <label className="self-start text-sm text-gray-500 border-b-2 border-orange-500">
           Team
         </label>
@@ -120,7 +120,7 @@ export default function Home() {
           {TEAM_MEMBERS.map((member) => (
             <div
               key={member.nickname}
-              className="flex flex-col items-center border p-4 rounded-md"
+              className="flex flex-col items-center border p-4 rounded-md bg-white/80 dark:bg-black/80"
             >
               <Image
                 className="h-10 w-10 rounded-full"
@@ -144,7 +144,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="max-w-2xl w-full p-4 flex flex-col gap-4">
+      <section id="about" className="max-w-3xl w-full p-4 flex flex-col gap-4">
         <label className="self-start text-sm text-gray-500 border-b-2 border-orange-500">
           About
         </label>
@@ -159,7 +159,7 @@ export default function Home() {
                     index === 0 && "opacity-0"
                   )}
                 ></div>
-                <div className="w-3 h-3 rounded-full bg-orange-100 flex flex-col justify-center items-center">
+                <div className="w-3 h-3 rounded-full bg-orange-100 dark:bg-orange-900 flex flex-col justify-center items-center">
                   <div className="w-2 h-2 rounded-full bg-orange-500"></div>
                 </div>
                 <div
@@ -176,11 +176,13 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="max-w-2xl w-full p-4 my-4 flex justify-end">
+      <footer className="max-w-3xl w-full p-4 my-4 flex justify-end">
         <span className="opacity-50 text-sm">
           Copyright &copy; 2024 Weelone Ltd
         </span>
       </footer>
+
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-zinc-900 bg-zinc-50 [mask-image:radial-gradient(ellipse_at_center,transparent_70%,black)]"></div>
     </main>
   );
 }

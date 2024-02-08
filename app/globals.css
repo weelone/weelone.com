@@ -16,3 +16,12 @@
     text-wrap: balance;
   }
 }
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    @apply dark:border-zinc-700;
+  }
+}
+
