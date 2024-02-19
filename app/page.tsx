@@ -62,11 +62,11 @@ export default function Home() {
                 target="_blank"
               >
                 <Image
-                  className="rounded-xl h-20 w-20 flex-shrink-0 shadow-lg shadow-gray-100"
+                  className="rounded-xl h-20 w-20 flex-shrink-0 shadow-lg shadow-gray-100 dark:shadow-gray-800"
                   src={sparkMemos}
                   alt="Logo of Spark Memos"
                 />
-                <div className="absolute -top-2 -left-2 bg-orange-500 px-2 py-1 rounded text-xs text-white">
+                <div className="absolute -top-2 -left-2 bg-orange-500 px-2 py-1 rounded text-xs text-white shadow-sm shadow-gray-900/20">
                   Crafting
                 </div>
               </a>
@@ -97,7 +97,7 @@ export default function Home() {
                 target="_blank"
               >
                 <Image
-                  className="rounded-xl h-20 w-20 flex-shrink-0 shadow-lg shadow-gray-100"
+                  className="rounded-xl h-20 w-20 flex-shrink-0 shadow-lg shadow-gray-100 dark:shadow-gray-800"
                   src={lofyee}
                   alt="Logo of Lofyee"
                 />
@@ -131,7 +131,7 @@ export default function Home() {
 
           <div className="rounded-md border flex flex-col gap-4 justify-between p-4 bg-white/80 dark:bg-black/80">
             <div className="flex gap-4">
-              <div className="rounded-xl h-20 w-20 flex-shrink-0 bg-zinc-500 text-white flex justify-center items-center shadow-lg shadow-gray-100">
+              <div className="rounded-xl h-20 w-20 flex-shrink-0 bg-zinc-500 text-white flex justify-center items-center shadow-lg shadow-gray-100 dark:shadow-gray-800">
                 <SparklesIcon className="h-10 w-10" />
               </div>
               <div>
@@ -207,8 +207,8 @@ export default function Home() {
                   )}
                 ></div>
               </div>
-              <div className="text-gray-500">{time}</div>
-              <div className="w-2 h-[1px] bg-gray-500" />
+              <div className="text-gray-500 whitespace-nowrap">{time}</div>
+              <div className="w-2 h-[1px] bg-gray-500/80" />
               <div className="py-2">{content}</div>
             </div>
           ))}
