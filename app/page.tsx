@@ -62,17 +62,19 @@ export default function Home() {
                 target="_blank"
               >
                 <Image
-                  className="rounded h-20 w-20 flex-shrink-0"
+                  className="rounded-xl h-20 w-20 flex-shrink-0 shadow-lg shadow-gray-100"
                   src={sparkMemos}
                   alt="Logo of Spark Memos"
                 />
-                <div className="absolute -top-2 -left-2 bg-orange-500 px-2 py-1 rounded text-sm text-white">
+                <div className="absolute -top-2 -left-2 bg-orange-500 px-2 py-1 rounded text-xs text-white">
                   Crafting
                 </div>
               </a>
               <div>
                 <h1 className="font-bold text-lg">Spark Memos</h1>
-                <p className="text-zinc-500">A memo record app.</p>
+                <p className="text-zinc-500">
+                  Record your inspirations anytime, anywhere.
+                </p>
               </div>
             </div>
             <div className="flex gap-4">
@@ -95,14 +97,16 @@ export default function Home() {
                 target="_blank"
               >
                 <Image
-                  className="rounded h-20 w-20 flex-shrink-0"
+                  className="rounded-xl h-20 w-20 flex-shrink-0 shadow-lg shadow-gray-100"
                   src={lofyee}
                   alt="Logo of Lofyee"
                 />
               </a>
               <div>
                 <h1 className="font-bold text-lg">Lofyee</h1>
-                <p className="text-zinc-500">A Lo-Fi music player for iOS.</p>
+                <p className="text-zinc-500">
+                  Listen Lo-Fi music, white noise and ambient music.
+                </p>
               </div>
             </div>
             <div className="flex gap-4">
@@ -127,7 +131,7 @@ export default function Home() {
 
           <div className="rounded-md border flex flex-col gap-4 justify-between p-4 bg-white/80 dark:bg-black/80">
             <div className="flex gap-4">
-              <div className="rounded h-20 w-20 flex-shrink-0 bg-zinc-500 text-white flex justify-center items-center">
+              <div className="rounded-xl h-20 w-20 flex-shrink-0 bg-zinc-500 text-white flex justify-center items-center shadow-lg shadow-gray-100">
                 <SparklesIcon className="h-10 w-10" />
               </div>
               <div>
@@ -204,6 +208,7 @@ export default function Home() {
                 ></div>
               </div>
               <div className="text-gray-500">{time}</div>
+              <div className="w-2 h-[1px] bg-gray-500" />
               <div className="py-2">{content}</div>
             </div>
           ))}
