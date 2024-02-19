@@ -17,7 +17,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth focus:scroll-auto">
-      <body className={twMerge(openSans.className)}>{children}</body>
+      <body
+        className={twMerge(
+          openSans.className,
+          "dark:bg-zinc-900 bg-zinc-50 text-zinc-900 dark:text-zinc-50"
+        )}
+      >
+        {children}
+      </body>
     </html>
   );
 }

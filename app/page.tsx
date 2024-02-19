@@ -3,6 +3,7 @@ import { Unkempt } from "next/font/google";
 import { twMerge } from "tailwind-merge";
 
 import lofyee from "../public/lofyee.png";
+import sparkMemos from "../public/sparkmemos.png";
 import { ArrowUpRightIcon, SparklesIcon } from "@heroicons/react/24/outline";
 import { TEAM_MEMBERS, TIMELINE } from "@/lib/data";
 
@@ -31,7 +32,7 @@ export default function Home() {
       </header>
       <section className="my-28 text-xl sm:text-3xl font-light flex flex-col items-center gap-2">
         <p className="">
-          We Are&nbsp;
+          We are&nbsp;
           <span
             className={twMerge(unkempt.className, "font-bold text-orange-500")}
           >
@@ -53,6 +54,39 @@ export default function Home() {
           Works
         </label>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="rounded-md border flex flex-col gap-4 justify-between p-4 bg-white/80 dark:bg-black/80">
+            <div className="flex gap-4">
+              <a
+                className="relative flex-shrink-0"
+                href="https://sparkmemos.com"
+                target="_blank"
+              >
+                <Image
+                  className="rounded h-20 w-20 flex-shrink-0"
+                  src={sparkMemos}
+                  alt="Logo of Spark Memos"
+                />
+                <div className="absolute -top-2 -left-2 bg-orange-500 px-2 py-1 rounded text-sm text-white">
+                  Crafting
+                </div>
+              </a>
+              <div>
+                <h1 className="font-bold text-lg">Spark Memos</h1>
+                <p className="text-zinc-500">A memo record app.</p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <a
+                className="text-sm text-orange-500 flex items-center"
+                href="https://sparkmemos.com"
+                target="_blank"
+              >
+                Website
+                <ArrowUpRightIcon className="h-3 w-3 ml-1" />
+              </a>
+            </div>
+          </div>
+
           <div className="rounded-md border flex flex-col gap-4 justify-between p-4 bg-white/80 dark:bg-black/80">
             <div className="flex gap-4">
               <a
