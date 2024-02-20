@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Unkempt } from "next/font/google";
 import { twMerge } from "tailwind-merge";
+import { SiX } from "@icons-pack/react-simple-icons";
 
 import lofyee from "../public/lofyee.png";
 import sparkMemos from "../public/sparkmemos.png";
@@ -21,12 +22,17 @@ export default function Home() {
         >
           Weelone
         </div>
-        <ul className="flex gap-5">
+        <ul className="flex gap-5 items-center">
           <li>
             <a href="#works">Works</a>
           </li>
           <li>
             <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/WeeloneHQ" target="_blank">
+              <SiX className="h-5 w-5" />
+            </a>
           </li>
         </ul>
       </header>
