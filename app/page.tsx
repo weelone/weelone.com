@@ -1,14 +1,17 @@
 import Image from "next/image";
-import { Unkempt } from "next/font/google";
+import localFont from "next/font/local";
 import { twMerge } from "tailwind-merge";
 import { SiX } from "@icons-pack/react-simple-icons";
-
-import lofyee from "../public/lofyee.png";
-import sparkMemos from "../public/sparkmemos.png";
 import { ArrowUpRightIcon, SparklesIcon } from "@heroicons/react/24/outline";
 import { TEAM_MEMBERS, TIMELINE } from "@/lib/data";
 
-const unkempt = Unkempt({ weight: ["400", "700"], subsets: ["latin"] });
+import lofyee from "../public/lofyee.png";
+import sparkMemos from "../public/sparkmemos.png";
+
+const myWriting = localFont({
+  src: "../public/my-writing.otf",
+  display: "swap",
+});
 
 export default function Home() {
   return (
@@ -16,7 +19,7 @@ export default function Home() {
       <header className="max-w-3xl w-full flex justify-between items-center p-4">
         <div
           className={twMerge(
-            unkempt.className,
+            myWriting.className,
             "text-2xl font-bold text-orange-500"
           )}
         >
@@ -40,7 +43,10 @@ export default function Home() {
         <p className="">
           We are&nbsp;
           <span
-            className={twMerge(unkempt.className, "font-bold text-orange-500")}
+            className={twMerge(
+              myWriting.className,
+              "font-bold text-orange-500"
+            )}
           >
             Weelone Studio
           </span>
