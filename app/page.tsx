@@ -1,7 +1,7 @@
 import Image from "next/image";
 import localFont from "next/font/local";
 import { twMerge } from "tailwind-merge";
-import { SiX } from "@icons-pack/react-simple-icons";
+import { SiGithub, SiX } from "@icons-pack/react-simple-icons";
 import { ArrowUpRightIcon, SparklesIcon } from "@heroicons/react/24/outline";
 import { TEAM_MEMBERS, TIMELINE } from "@/lib/data";
 
@@ -31,6 +31,11 @@ export default function Home() {
           </li>
           <li>
             <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="https://github.com/weelone" target="_blank">
+              <SiGithub className="h-5 w-5" />
+            </a>
           </li>
           <li>
             <a href="https://twitter.com/WeeloneHQ" target="_blank">
