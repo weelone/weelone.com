@@ -4,6 +4,10 @@ import chatGPT from "../public/chatgpt.svg";
 
 export const TIMELINE = [
   {
+    time: "2024-4-26",
+    content: "Release Spark Memos 1.0",
+  },
+  {
     time: "2024-2-19",
     content: "Start to craft Spark Memos",
   },

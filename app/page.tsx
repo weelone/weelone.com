@@ -103,6 +103,14 @@ export default function Home() {
                 Website
                 <ArrowUpRightIcon className="h-3 w-3 ml-1" />
               </a>
+              <a
+                className="text-sm text-orange-500 flex items-center"
+                href="https://apps.apple.com/us/app/spark-memos-inspiration/id6480926767"
+                target="_blank"
+              >
+                App Store
+                <ArrowUpRightIcon className="h-3 w-3 ml-1" />
+              </a>
             </div>
           </div>
 
