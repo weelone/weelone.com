@@ -2,7 +2,11 @@ import Image from "next/image";
 import localFont from "next/font/local";
 import { twMerge } from "tailwind-merge";
 import { SiGithub, SiX } from "@icons-pack/react-simple-icons";
-import { ArrowUpRightIcon, SparklesIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowUpRightIcon,
+  EnvelopeIcon,
+  SparklesIcon,
+} from "@heroicons/react/24/outline";
 import { TEAM_MEMBERS, TIMELINE } from "@/lib/data";
 
 import lofyee from "../public/lofyee.png";
@@ -16,7 +20,7 @@ const myWriting = localFont({
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center gap-8 dark:bg-zinc-900 bg-zinc-50 text-zinc-900 dark:text-zinc-50 dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative">
-      <header className="max-w-3xl w-full flex justify-between items-center p-4">
+      <header className="max-w-5xl w-full flex justify-between items-center p-4">
         <div
           className={twMerge(
             myWriting.className,
@@ -66,7 +70,7 @@ export default function Home() {
         </p>
         <p>Hope you will love.</p>
       </section>
-      <section id="works" className="max-w-3xl w-full p-4 flex flex-col gap-4">
+      <section id="works" className="max-w-5xl w-full p-4 flex flex-col gap-4">
         <label className="text-sm self-start text-gray-500 border-b-2 border-orange-500">
           Works
         </label>
@@ -90,7 +94,7 @@ export default function Home() {
               <div>
                 <h1 className="font-bold text-lg">Spark Memos</h1>
                 <p className="text-zinc-500">
-                  Record your inspirations anytime, anywhere.
+                  Capture your inspirations anytime, anywhere.
                 </p>
               </div>
             </div>
@@ -174,7 +178,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="Team" className="max-w-3xl w-full p-4 flex flex-col gap-4">
+      <section id="Team" className="max-w-5xl w-full p-4 flex flex-col gap-4">
         <label className="self-start text-sm text-gray-500 border-b-2 border-orange-500">
           Team
         </label>
@@ -207,7 +211,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="max-w-3xl w-full p-4 flex flex-col gap-4">
+      <section id="about" className="max-w-5xl w-full p-4 flex flex-col gap-4">
         <label className="self-start text-sm text-gray-500 border-b-2 border-orange-500">
           About
         </label>
@@ -240,7 +244,13 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="max-w-3xl w-full p-4 my-4 flex justify-end">
+      <footer className="max-w-5xl w-full p-4 my-4 flex justify-between">
+        <span className="text-sm flex items-center">
+          <EnvelopeIcon className="h-5 w-5 mr-1" />
+          <a className="underline" href="mailto:nooc@weelone.com">
+            Contact us
+          </a>
+        </span>
         <span className="opacity-50 text-sm">
           Copyright &copy; 2024 Weelone Ltd
         </span>
