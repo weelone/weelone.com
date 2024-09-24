@@ -4,8 +4,16 @@ import chatGPT from "../public/chatgpt.svg";
 
 export const TIMELINE = [
   {
+    time: "2024-9-17",
+    content: "CassetteOne released",
+  },
+  {
+    time: "2024-9-8",
+    content: "Start to craft CassetteOne",
+  },
+  {
     time: "2024-4-26",
-    content: "Release Spark Memos 1.0",
+    content: "Spark Memos released",
   },
   {
     time: "2024-2-19",

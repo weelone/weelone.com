@@ -11,6 +11,7 @@ import { TEAM_MEMBERS, TIMELINE } from "@/lib/data";
 
 import lofyee from "../public/lofyee.png";
 import sparkMemos from "../public/sparkmemos.png";
+import cassette from "../public/cassette.png";
 
 const myWriting = localFont({
   src: "../public/my-writing.otf",
@@ -110,6 +111,51 @@ export default function Home() {
               <a
                 className="text-sm text-orange-500 flex items-center"
                 href="https://apps.apple.com/us/app/spark-memos-inspiration/id6480926767"
+                target="_blank"
+              >
+                App Store
+                <ArrowUpRightIcon className="h-3 w-3 ml-1" />
+              </a>
+            </div>
+          </div>
+
+          <div className="rounded-md border flex flex-col gap-4 justify-between p-4 bg-white/80 dark:bg-black/80">
+            <div className="flex gap-4">
+              <a
+                className="relative flex-shrink-0"
+                href="https://cassette.one"
+                target="_blank"
+              >
+                <Image
+                  className="rounded-xl h-20 w-20 flex-shrink-0 shadow-lg shadow-gray-100 dark:shadow-gray-800"
+                  src={cassette}
+                  alt="Logo of CassetteOne"
+                />
+                <div className="absolute -top-2 -left-2 bg-orange-500 px-2 py-1 rounded text-xs text-white shadow-sm shadow-gray-900/20">
+                  Crafting
+                </div>
+              </a>
+              <div>
+                <h1 className="font-bold text-lg">
+                  CassetteOne - Ambience & Music
+                </h1>
+                <p className="text-zinc-500">
+                  Retro design cassette music player.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <a
+                className="text-sm text-orange-500 flex items-center"
+                href="https://cassette.one"
+                target="_blank"
+              >
+                Website
+                <ArrowUpRightIcon className="h-3 w-3 ml-1" />
+              </a>
+              <a
+                className="text-sm text-orange-500 flex items-center"
+                href="https://weel.one/cassette-ios"
                 target="_blank"
               >
                 App Store

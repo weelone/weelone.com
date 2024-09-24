@@ -8,6 +8,18 @@ const openSans = Open_Sans({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Weelone",
   description: "Official website of Weelone.",
+  keywords: [
+    "Weelone",
+    "Spark Memos",
+    "CassetteOne",
+    "Lofyee",
+    "Nooc",
+    "Note taking",
+    "Short note",
+    "Cassette player",
+    "Retro design",
+    "Lo-fi music",
+  ],
 };
 
 export default function RootLayout({
