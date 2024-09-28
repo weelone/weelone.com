@@ -1,6 +1,7 @@
 import noocAvatar from "../public/nooc.png";
 import githubCopilot from "../public/github-copilot.png";
-import chatGPT from "../public/chatgpt.svg";
+import claude from "../public/claude.png";
+import cursor from "../public/cursor.png";
 
 export const TIMELINE = [
   {
@@ -41,15 +42,15 @@ export const TEAM_MEMBERS = [
     website: "https://nooc.me",
   },
   {
-    nickname: "GitHub Copilot",
-    role: "Code Assistant",
-    avatar: githubCopilot,
-    website: "https://github.com/features/copilot",
+    nickname: "Claude",
+    role: "AI Assistant",
+    avatar: claude,
+    website: "https://claude.ai",
   },
   {
-    nickname: "ChatGPT",
-    role: "Assistant",
-    avatar: chatGPT,
-    website: "https://chat.openai.com",
+    nickname: "Cursor",
+    role: "Code Assistant",
+    avatar: cursor,
+    website: "https://www.cursor.com",
   },
 ];

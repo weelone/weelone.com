@@ -1,7 +1,7 @@
 import Image from "next/image";
 import localFont from "next/font/local";
 import { twMerge } from "tailwind-merge";
-import { SiGithub, SiX } from "@icons-pack/react-simple-icons";
+import { SiDiscord, SiGithub, SiX } from "@icons-pack/react-simple-icons";
 import {
   ArrowUpRightIcon,
   EnvelopeIcon,
@@ -40,6 +40,11 @@ export default function Home() {
           <li>
             <a href="https://github.com/weelone" target="_blank">
               <SiGithub className="h-5 w-5" />
+            </a>
+          </li>
+          <li>
+            <a href="https://weel.one/discord" target="_blank">
+              <SiDiscord className="h-5 w-5" />
             </a>
           </li>
           <li>
