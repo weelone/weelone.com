@@ -1,9 +1,11 @@
-import noocAvatar from "../public/nooc.png";
-import githubCopilot from "../public/github-copilot.png";
-import claude from "../public/claude.png";
-import cursor from "../public/cursor.png";
+import noocAvatar from "../public/images/nooc.png";
+import githubCopilot from "../public/images/github-copilot.png";
 
 export const TIMELINE = [
+  {
+    time: "2025-4-1",
+    content: "Echobell released",
+  },
   {
     time: "2024-9-17",
     content: "CassetteOne released",
@@ -42,15 +44,9 @@ export const TEAM_MEMBERS = [
     website: "https://nooc.me",
   },
   {
-    nickname: "Claude",
-    role: "AI Assistant",
-    avatar: claude,
-    website: "https://claude.ai",
-  },
-  {
-    nickname: "Cursor",
-    role: "Code Assistant",
-    avatar: cursor,
-    website: "https://www.cursor.com",
+    nickname: "GitHub Copilot",
+    role: "Assistant",
+    avatar: githubCopilot,
+    website: "https://github.com/features/copilot",
   },
 ];

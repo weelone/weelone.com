@@ -9,12 +9,13 @@ import {
 } from "@heroicons/react/24/outline";
 import { TEAM_MEMBERS, TIMELINE } from "@/lib/data";
 
-import lofyee from "../public/lofyee.png";
-import sparkMemos from "../public/sparkmemos.png";
-import cassette from "../public/cassette.png";
+import lofyee from "../public/images/lofyee.png";
+import sparkMemos from "../public/images/sparkmemos.png";
+import cassette from "../public/images/cassette.png";
+import echobellLogo from "../public/images/echobell.webp";
 
 const myWriting = localFont({
-  src: "../public/my-writing.otf",
+  src: "../public/fonts/my-writing.otf",
   display: "swap",
 });
 
@@ -81,6 +82,49 @@ export default function Home() {
           Works
         </label>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="rounded-md border flex flex-col gap-4 justify-between p-4 bg-white/80 dark:bg-black/80">
+            <div className="flex gap-4">
+              <a
+                className="relative flex-shrink-0"
+                href="https://apps.apple.com/app/id6743597198"
+                target="_blank"
+              >
+                <Image
+                  className="rounded-xl h-20 w-20 flex-shrink-0 shadow-lg shadow-gray-100 dark:shadow-gray-800"
+                  src={echobellLogo}
+                  alt="Logo of Echobell"
+                />
+                <div className="absolute -top-2 -left-2 bg-orange-500 px-2 py-1 rounded text-xs text-white shadow-sm shadow-gray-900/20">
+                  Crafting
+                </div>
+              </a>
+              <div>
+                <h1 className="font-bold text-lg">Echobell</h1>
+                <p className="text-zinc-500">
+                  Instant alerts for different scenarios.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <a
+                className="text-sm text-orange-500 flex items-center"
+                href="https://echobell.one"
+                target="_blank"
+              >
+                Website
+                <ArrowUpRightIcon className="h-3 w-3 ml-1" />
+              </a>
+              <a
+                className="text-sm text-orange-500 flex items-center"
+                href="https://apps.apple.com/app/id6743597198"
+                target="_blank"
+              >
+                App Store
+                <ArrowUpRightIcon className="h-3 w-3 ml-1" />
+              </a>
+            </div>
+          </div>
+
           <div className="rounded-md border flex flex-col gap-4 justify-between p-4 bg-white/80 dark:bg-black/80">
             <div className="flex gap-4">
               <a
