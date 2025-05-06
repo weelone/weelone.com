@@ -116,7 +116,7 @@ export default function Home() {
               </a>
               <a
                 className="text-sm text-orange-500 flex items-center"
-                href="https://apps.apple.com/app/id6743597198"
+                href="https://apps.apple.com/app/apple-store/id6743597198?pt=126931111&ct=Weelone&mt=8"
                 target="_blank"
               >
                 App Store
