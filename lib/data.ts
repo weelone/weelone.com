@@ -3,6 +3,10 @@ import githubCopilot from "../public/images/github-copilot.png";
 
 export const TIMELINE = [
   {
+    time: "2026-1-22",
+    content: "Dippod released",
+  },
+  {
     time: "2025-4-1",
     content: "Echobell released",
   },

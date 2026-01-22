@@ -13,6 +13,7 @@ import lofyee from "../public/images/lofyee.png";
 import sparkMemos from "../public/images/sparkmemos.png";
 import cassette from "../public/images/cassette.png";
 import echobellLogo from "../public/images/echobell.webp";
+import dipppod from "../public/images/dippod.webp";
 
 const myWriting = localFont({
   src: "../public/fonts/my-writing.otf",
@@ -26,7 +27,7 @@ export default function Home() {
         <div
           className={twMerge(
             myWriting.className,
-            "text-2xl font-bold text-orange-500"
+            "text-2xl font-bold text-orange-500",
           )}
         >
           Weelone
@@ -61,7 +62,7 @@ export default function Home() {
           <span
             className={twMerge(
               myWriting.className,
-              "font-bold text-orange-500"
+              "font-bold text-orange-500",
             )}
           >
             Weelone Studio
@@ -91,12 +92,41 @@ export default function Home() {
               >
                 <Image
                   className="rounded-xl h-20 w-20 flex-shrink-0 shadow-lg shadow-gray-100 dark:shadow-gray-800"
+                  src={dipppod}
+                  alt="Logo of Dippod"
+                />
+              </a>
+              <div>
+                <h1 className="font-bold text-lg">Dippod</h1>
+                <p className="text-zinc-500">
+                  AI-Native Flashcard Generation and Spaced Repetition App
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <a
+                className="text-sm text-orange-500 flex items-center"
+                href="https://dippod.com"
+                target="_blank"
+              >
+                Website
+                <ArrowUpRightIcon className="h-3 w-3 ml-1" />
+              </a>
+            </div>
+          </div>
+
+          <div className="rounded-md border flex flex-col gap-4 justify-between p-4 bg-white/80 dark:bg-black/80">
+            <div className="flex gap-4">
+              <a
+                className="relative flex-shrink-0"
+                href="https://apps.apple.com/app/id6743597198"
+                target="_blank"
+              >
+                <Image
+                  className="rounded-xl h-20 w-20 flex-shrink-0 shadow-lg shadow-gray-100 dark:shadow-gray-800"
                   src={echobellLogo}
                   alt="Logo of Echobell"
                 />
-                <div className="absolute -top-2 -left-2 bg-orange-500 px-2 py-1 rounded text-xs text-white shadow-sm shadow-gray-900/20">
-                  Crafting
-                </div>
               </a>
               <div>
                 <h1 className="font-bold text-lg">Echobell</h1>
@@ -137,9 +167,6 @@ export default function Home() {
                   src={sparkMemos}
                   alt="Logo of Spark Memos"
                 />
-                <div className="absolute -top-2 -left-2 bg-orange-500 px-2 py-1 rounded text-xs text-white shadow-sm shadow-gray-900/20">
-                  Crafting
-                </div>
               </a>
               <div>
                 <h1 className="font-bold text-lg">Spark Memos</h1>
@@ -180,9 +207,6 @@ export default function Home() {
                   src={cassette}
                   alt="Logo of CassetteOne"
                 />
-                <div className="absolute -top-2 -left-2 bg-orange-500 px-2 py-1 rounded text-xs text-white shadow-sm shadow-gray-900/20">
-                  Crafting
-                </div>
               </a>
               <div>
                 <h1 className="font-bold text-lg">
@@ -318,7 +342,7 @@ export default function Home() {
                 <div
                   className={twMerge(
                     "w-[2px] flex-grow bg-orange-500",
-                    index === 0 && "opacity-0"
+                    index === 0 && "opacity-0",
                   )}
                 ></div>
                 <div className="w-3 h-3 rounded-full bg-orange-100 dark:bg-orange-900 flex flex-col justify-center items-center">
@@ -327,7 +351,7 @@ export default function Home() {
                 <div
                   className={twMerge(
                     "w-[2px] flex-grow bg-orange-500",
-                    index === TIMELINE.length - 1 && "opacity-0"
+                    index === TIMELINE.length - 1 && "opacity-0",
                   )}
                 ></div>
               </div>
@@ -347,7 +371,7 @@ export default function Home() {
           </a>
         </span>
         <span className="opacity-50 text-sm">
-          Copyright &copy; 2024 Weelone Ltd
+          Copyright &copy; 2026 Weelone Studio. All rights reserved.
         </span>
       </footer>
     </main>
